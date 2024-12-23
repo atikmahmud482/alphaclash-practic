@@ -7,8 +7,13 @@
 
 // }
 
+function continueGame() {
+    const alphabet = getARandomAlphabet();
+    console.log(alphabet);
+}
 
 function play() {
     hideElement('home-screen');
     showElement('play-ground');
+    continueGame();
 }
