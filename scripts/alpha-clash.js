@@ -6,6 +6,10 @@
 //     document.getElementById('play-ground').classList.remove('hidden');
 
 // }
+function handleKeyboardButtonPress() {
+    console.log('Key pressed');
+}
+document.addEventListener('keyup', handleKeyboardButtonPress);
 
 function continueGame() {
     const alphabet = getARandomAlphabet();
