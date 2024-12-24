@@ -24,5 +24,5 @@ function getARandomAlphabet() {
     return alphabetNum[randomIndex];
 
     // console.log(randomIndex);
-
+    //start
 }
