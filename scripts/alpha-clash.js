@@ -6,18 +6,36 @@
 //     document.getElementById('play-ground').classList.remove('hidden');
 
 // }
-function handleKeyboardButtonPress() {
-    console.log('Key pressed');
-}
-document.addEventListener('keyup', handleKeyboardButtonPress);
+// function handleKeyboardButtonPress() {
+//     console.log('Key pressed');
+// }
+document.addEventListener('keyup', function (event) {
+    console.log(event.key);
+    const currentAlphabet = document.getElementById('current-alphabet');
+    const currentAlphabetValue = currentAlphabet.innerText;
+    const expectedAlphabet = currentAlphabetValue.toLowerCase();
+    console.log(expectedAlphabet);
+
+    if (event.key === expectedAlphabet) {
+        console.log('Correct');
+        continueGame();
+    }
+    else {
+        console.log('Game over');
+    }
+
+
+});
 
 function continueGame() {
     const alphabet = getARandomAlphabet();
     // console.log(alphabet);
-    document.getElementById('current-alphabet').textContent = alphabet;
+    const currentAlphabet = document.getElementById('current-alphabet');
+    currentAlphabet.innerText = alphabet;
+    setBackgroundColorById(alphabet);
 
 
-    setBackgroundColor(alphabet);
+
 }
 
 function play() {
