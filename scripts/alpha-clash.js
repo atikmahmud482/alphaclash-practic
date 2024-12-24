@@ -10,18 +10,19 @@
 //     console.log('Key pressed');
 // }
 document.addEventListener('keyup', function (event) {
-    console.log(event.key);
+    // console.log(event.key);
     const currentAlphabet = document.getElementById('current-alphabet');
     const currentAlphabetValue = currentAlphabet.innerText;
     const expectedAlphabet = currentAlphabetValue.toLowerCase();
-    console.log(expectedAlphabet);
+    // console.log(expectedAlphabet);
 
     if (event.key === expectedAlphabet) {
-        console.log('Correct');
+        // console.log('Correct');
+        removeBackgroundColor(expectedAlphabet);
         continueGame();
     }
     else {
-        console.log('Game over');
+        // console.log('Game over');
     }
 
 
